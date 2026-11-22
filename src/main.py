@@ -1,4 +1,50 @@
-from models import Transaction
+from sqlalchemy import create_engine 
+from sqlalchemy.orm import sessionmaker, declarative_base
 
-sw = Transaction(777, "produckt", "Incread", "pokypka")
-print(sw.summary())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
