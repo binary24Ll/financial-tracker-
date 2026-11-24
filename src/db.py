@@ -1,6 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from sqlalchemy.orm import DeclarativeBase
 
+
 DATABASE_URL = "postgresql+asyncpg://postgres:secret_password@localhost:5432/finance_db"
 
 engine = create_async_engine(DATABASE_URL, echo=True, pool_pre_ping=True)
@@ -13,3 +14,7 @@ AsyncSessionLocal = async_sessionmaker(
 
 class Base(DeclarativeBase): 
     pass
+
+async def get_session():
+    async with AsyncSession() as session:
+        yield session 
